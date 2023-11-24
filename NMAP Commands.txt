@@ -1,0 +1,28 @@
+LOCALHOST
+nmap localhost
+nmap -O localhost
+namp -v localhost
+
+DOMAIN BASED
+nmap www.reva.edu.in
+nmap -v www.reva.edu.in
+
+IP BASED
+nmap 192.168.1.106
+
+MULTIPLE TARGETS
+nmap www.reva.edu.in www.google.com
+nmap 192.168.1.106 172.217.27.174
+nmap 192.168.1.1-24
+nmap 192.168.1.*
+
+PORT SCANNING
+nmap -p 80 192.168.1.1
+nmap -p 80-160 192.168.1.1
+
+TCP/UDP PORT
+nmap -p T:80 192.168.1.1
+nmap -p U:53 192.168.1.1
+
+nmap -sT www.reva.edu.in
+nmap -sU 192.168.1.1

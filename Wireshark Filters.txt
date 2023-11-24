@@ -1,0 +1,26 @@
+
+IP FILTERS
+ip.addr == 10.43.54.65
+ip.src == 10.43.54.65
+ip.dst == 10.43.54.65
+ip.addr != 10.43.54.65
+! ( ip.addr == 10.43.54.65 )
+ip.dst eq www.mit.edu
+
+eth.addr[0:3]==00:06:5B
+
+PROTOCOL FILTERS
+udp
+tcp
+tcp.port eq 25 
+all tcp.port > 1024
+
+
+MULTIPLE FILTERS
+tcp.port eq 25 or icmp
+ip.src == 10.43.54.65 or ip.dst == 10.43.54.65
+ip.src==192.168.0.0/16 and ip.dst==192.168.0.0/16
+udp[8:3]==81:60:03
+smb || nbns || dcerpc || nbss || dns
+
+
